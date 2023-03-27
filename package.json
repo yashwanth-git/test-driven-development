@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.10",
@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:watch": "jest --watch",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -42,7 +43,11 @@
     ]
   },
   "devDependencies": {
+    "@types/jest-axe": "^3.5.5",
+    "babel-jest": "^29.5.0",
     "husky": ">=6",
+    "jest": "^29.5.0",
+    "jest-axe": "^7.0.1",
     "lint-staged": ">=10",
     "prettier": "2.8.7"
   },
