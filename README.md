@@ -14,7 +14,7 @@ This is a personal lab where I try my best to follow test driven development.
 - [x] Setup React TypeScript Project using yarn
 - [x] Setup lint, jest and prettier
 - [x] Setup basic CI
-- [ ] Decide the components visualizing the tests
+- [x] Decide the components visualizing the tests
 - [ ] Write tests
 - [ ] Build components
 
