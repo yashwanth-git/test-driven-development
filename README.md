@@ -14,9 +14,20 @@ This is a personal lab where I try my best to follow test driven development.
 - [x] Setup React TypeScript Project using yarn
 - [x] Setup lint, jest and prettier
 - [x] Setup basic CI
-- [ ] Decide the components visualizing the tests
+- [x] Decide the components visualizing the tests
 - [ ] Write tests
 - [ ] Build components
+
+## Rough Idea
+
+Planning to build a vending machine which returns the coins based on the product purchased. Idea is to return the denominations available in USD from the vending machine [Should check the available coin denominations in USD]. When the amount inserted is exact, the vending machine should not return any value. When a change needs to be returned, the machine should return coins matching the denominations.
+
+### Points to remember
+
+- Return type should be array
+- Return empty array when there is not return
+- Return the denominations in array if there is a return
+- Can use parameterized testing to check various values
 
 ## Setup
 
