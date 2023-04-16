@@ -3,9 +3,12 @@ import { getChange } from './helpers';
 // Denominations available: 1, 5, 10, 25, 50, 100
 describe('Tests for Helpers', () => {
   test('getChange(1,1) should equal [] - an empty array', () => {
-    let totalCost = 5;
-    let amountPaid = 5;
-    let result = getChange(totalCost, amountPaid);
+    let result = getChange(5, 5);
     expect(result).toEqual([]);
+  });
+  test('getChange(215, 300) should return [50, 25, 10]', () => {
+    let result = getChange(215, 300);
+    let expectedResult = [50, 25, 10];
+    expect(result).toEqual(expectedResult);
   });
 });

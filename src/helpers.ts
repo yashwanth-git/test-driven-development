@@ -1,4 +1,4 @@
-const cointypes = [200, 100, 50, 20, 10, 5, 2, 1];
+const cointypes = [100, 50, 25, 10, 5, 1];
 export const getChange = (totalCost: number, amountPaid: number) => {
   let difference = amountPaid - totalCost;
   let change: number[] = [];
