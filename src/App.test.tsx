@@ -11,7 +11,7 @@ describe('Application Test', () => {
     const { container } = render(<App />);
     const inputEl = container.querySelector('.amout-paid');
     const selectEl = container.querySelector('.vending-select');
-    const buttonEl = container.querySelector('.pay-btn');
+    const buttonEl = container.querySelector('.pay-btn') as HTMLElement;
 
     fireEvent.click(buttonEl);
     expect(selectEl).toBe(true);
