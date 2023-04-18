@@ -27,6 +27,7 @@
 .heading {
   text-align: center;
   width: calc(60em / 5);
+  font-weight: 600;
 }
 .heading:not(:last-child) {
   border-right: 1px solid #383131;

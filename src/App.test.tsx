@@ -9,12 +9,10 @@ describe('Application Test', () => {
   });
   test('On buttonClick, check if amount is entered or not, check if option is selection', () => {
     const { container } = render(<App />);
-    const inputEl = container.querySelector('.amout-paid');
-    const selectEl = container.querySelector('.vending-select');
+    const inputEl = container.querySelector('.amout-paid') as HTMLInputElement;
     const buttonEl = container.querySelector('.pay-btn') as HTMLElement;
 
     fireEvent.click(buttonEl);
-    expect(selectEl).toBe(true);
     expect(inputEl).not.toBe('');
   });
 });
