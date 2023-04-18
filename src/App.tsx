@@ -26,42 +26,50 @@ function App() {
     setAmountToBePaid(selectedItem[0].cost);
   };
   return (
-    <div className="App">
-      <header className="Header">
+    <div className="app">
+      <header className="header">
         <h1>Vending Machine</h1>
       </header>
-      <div className="header">
-        <div className="heading">Serial No</div>
-        <div className="heading">Item Selection</div>
-        <div className="heading">Amount</div>
-        <div className="heading">Paid</div>
-        <div className="heading">Amount Returned</div>
-      </div>
-      <div className="row">
-        <div className="col">
-          <div className="selector">
-            <select
-              name="vending-machine"
-              id="vending-machine"
-              onChange={changeHandler}
-            >
-              {vendingOptions.map((opt) => (
-                <option value={opt.name} key={opt.id}>
-                  {opt.name}
-                </option>
-              ))}
-            </select>
-            <div></div>
+      <div className="table">
+        <div className="table-header">
+          <div className="heading">Serial No</div>
+          <div className="heading">Available Items</div>
+          <div className="heading">Amount</div>
+          <div className="heading">Paid</div>
+          <div className="heading">Amount Returned</div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <span>1</span>
           </div>
-        </div>
-        <div className="col">
-          <span className="amount">{amoutToBePaid}</span>
-        </div>
-        <div className="col">
-          <input type="text" className="amoutPaid" />
-        </div>
-        <div className="col">
-          <span className="return"></span>
+          <div className="col">
+            <div className="selector">
+              <select
+                name="vending-machine"
+                id="vending-machine"
+                onChange={changeHandler}
+              >
+                {vendingOptions.map((opt) => (
+                  <option value={opt.name} key={opt.id}>
+                    {opt.name}
+                  </option>
+                ))}
+              </select>
+              <div></div>
+            </div>
+          </div>
+          <div className="col">
+            <span className="amount">{amoutToBePaid}</span>
+          </div>
+          <div className="col">
+            <form className="payment-form">
+              <input type="text" className="amoutPaid" />
+              <button className="pay-btn">Pay</button>
+            </form>
+          </div>
+          <div className="col">
+            <span className="return"></span>
+          </div>
         </div>
       </div>
     </div>
