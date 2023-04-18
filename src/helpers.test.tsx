@@ -7,12 +7,12 @@ describe('Tests for Helpers', () => {
     expect(result).toEqual([]);
   });
   test('getChange(215, 300) should return [50, 25, 10]', () => {
-    let result = getChange(215, 300);
+    let result = getChange(2.15, 3);
     let expectedResult = [50, 25, 10];
     expect(result).toEqual(expectedResult);
   });
   test('getChange(125, 200) should return [50, 25]', () => {
-    let result = getChange(125, 200);
+    let result = getChange(1.25, 2);
     let expectedResult = [50, 25];
     expect(result).toEqual(expectedResult);
   });
