@@ -30,19 +30,39 @@ function App() {
       <header className="Header">
         <h1>Vending Machine</h1>
       </header>
-      <div className="selector">
-        <select
-          name="vending-machine"
-          id="vending-machine"
-          onChange={changeHandler}
-        >
-          {vendingOptions.map((opt) => (
-            <option value={opt.name} key={opt.id}>
-              {opt.name}
-            </option>
-          ))}
-        </select>
-        <div>{amoutToBePaid}</div>
+      <div className="header">
+        <div className="heading">Serial No</div>
+        <div className="heading">Item Selection</div>
+        <div className="heading">Amount</div>
+        <div className="heading">Paid</div>
+        <div className="heading">Amount Returned</div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <div className="selector">
+            <select
+              name="vending-machine"
+              id="vending-machine"
+              onChange={changeHandler}
+            >
+              {vendingOptions.map((opt) => (
+                <option value={opt.name} key={opt.id}>
+                  {opt.name}
+                </option>
+              ))}
+            </select>
+            <div></div>
+          </div>
+        </div>
+        <div className="col">
+          <span className="amount">{amoutToBePaid}</span>
+        </div>
+        <div className="col">
+          <input type="text" className="amoutPaid" />
+        </div>
+        <div className="col">
+          <span className="return"></span>
+        </div>
       </div>
     </div>
   );
