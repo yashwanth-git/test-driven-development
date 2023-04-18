@@ -1,6 +1,7 @@
 const cointypes = [100, 50, 25, 10, 5, 1];
 export const getChange = (totalCost: number, amountPaid: number) => {
-  let difference = amountPaid - totalCost;
+  console.log(totalCost, amountPaid);
+  let difference = (amountPaid - totalCost) * 100;
   let change: number[] = [];
 
   cointypes.forEach(function (coin) {

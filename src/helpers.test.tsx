@@ -11,4 +11,9 @@ describe('Tests for Helpers', () => {
     let expectedResult = [50, 25, 10];
     expect(result).toEqual(expectedResult);
   });
+  test('getChange(125, 200) should return [50, 25]', () => {
+    let result = getChange(125, 200);
+    let expectedResult = [50, 25];
+    expect(result).toEqual(expectedResult);
+  });
 });
