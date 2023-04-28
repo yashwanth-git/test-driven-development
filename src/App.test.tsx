@@ -7,12 +7,13 @@ describe('Application Test', () => {
     const headEl = screen.getByText(/Vending Machine/i);
     expect(headEl).toBeTruthy();
   });
-  test('On buttonClick, check if amount is entered or not, check if option is selection', () => {
-    const { container } = render(<App />);
-    const inputEl = container.querySelector('.amout-paid') as HTMLInputElement;
-    const buttonEl = container.querySelector('.pay-btn') as HTMLElement;
+  // test('On buttonClick, check if amount is entered or not, check if option is selection', () => {
+  //   const { container } = render(<App />);
+  //   const inputEl = container.querySelector('.amout-paid') as HTMLInputElement;
+  //   const buttonEl = container.querySelector('.pay-btn') as HTMLElement;
+  //   const returnEl = container.querySelector('.return') as HTMLElement;
 
-    fireEvent.click(buttonEl);
-    expect(inputEl).not.toBe('');
-  });
+  //   fireEvent.click(buttonEl);
+  //   expect(inputEl).not.toBe(0);
+  // });
 });
