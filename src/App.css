@@ -29,7 +29,8 @@
   width: calc(60em / 5);
   font-weight: 600;
 }
-.heading:not(:last-child) {
+.heading:not(:last-child),
+.row > .col:not(:last-child) {
   border-right: 1px solid #383131;
 }
 .row {

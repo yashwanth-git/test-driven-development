@@ -31,8 +31,16 @@ function App() {
       cost: 0.75,
     },
   ];
+  const tableHeadings: string[] = [
+    'Serial No',
+    'Available Items',
+    'Amount ($)',
+    'Paid ($)',
+    'Amount Returned',
+  ];
   const [amountToBePaid, setAmountToBePaid] = useState(Number);
   const [returns, setReturns] = useState<Number[]>([]);
+  const [sno, setSno] = useState<Number>(1);
 
   const changeHandler = (e: { target: { value: string } }) => {
     let selectedItem = vendingOptions.filter((v) => v.name === e.target.value);
@@ -49,15 +57,15 @@ function App() {
       </header>
       <div className="table">
         <div className="table-header">
-          <div className="heading">Serial No</div>
-          <div className="heading">Available Items</div>
-          <div className="heading">Amount</div>
-          <div className="heading">Paid</div>
-          <div className="heading">Amount Returned</div>
+          {tableHeadings.map((heading, index) => (
+            <div className="heading" key={index}>
+              {heading}
+            </div>
+          ))}
         </div>
         <div className="row">
           <div className="col">
-            <span>1</span>
+            <span>{String(sno)}</span>
           </div>
           <div className="col">
             <div className="selector">
