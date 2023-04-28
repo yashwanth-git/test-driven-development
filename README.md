@@ -15,8 +15,12 @@ This is a personal lab where I try my best to follow test driven development.
 - [x] Setup lint, jest and prettier
 - [x] Setup basic CI
 - [x] Decide the components visualizing the tests
-- [ ] Write tests
-- [ ] Build components
+- [x] Write tests
+- [x] Build components
+- [x] Parameterized tests
+- [ ] Explore UI tests
+- [ ] Add UI tests
+- [ ] Add new vending entries to Table
 
 ## Rough Idea
 
